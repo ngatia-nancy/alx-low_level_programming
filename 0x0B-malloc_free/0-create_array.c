@@ -37,3 +37,8 @@ return (buffer);
 }
 
 }
+
+int main()
+{
+	return 0;
+}
