@@ -6,24 +6,22 @@
  * @str: string to store in the list.
  * Return: address of the head.
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
-    list_t *new;
-    size_t nchar;
+	list_t *new;
+	size_t a = 0;
 
-    new = malloc(sizeof(list_t));
-    if (new == NULL)
-        return (NULL);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
 
-    new->str = strdup(str);
+	while (str[a])
+		a++;
 
-    for (nchar = 0; str[nchar]; nchar++)
-        ;
+	new->str = strdup(str);
+	new->len = a;
+	new->next = *head;
+	*head = new;
 
-    new->len = nchar;
-    new->next = *head;
-    *head = new;
-
-    return (*head);
+	return (*head);
 }
