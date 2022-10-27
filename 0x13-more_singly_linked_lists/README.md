@@ -80,4 +80,10 @@ Prototype: size_t free_listint_safe(listint_t **h);
 This function can free lists with a loop
 You should go though the list only once
 Returns: the size of the list that was free’d
-The function sets the head to NULL 
+The function sets the head to NULL
+14. 103-find_loop.c - a function that finds the loop in a linked list.
+
+Prototype: listint_t *find_listint_loop(listint_t *head);
+Returns: The address of the node where the loop starts, or NULL if there is no loop
+You are not allowed to use malloc, free or arrays
+You can only declare a maximum of two variables in your function 
