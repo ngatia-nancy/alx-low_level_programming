@@ -5,3 +5,9 @@ How to use linked lists.
 
 Prototype: size_t print_listint(const listint_t *h);
 Return: the number of nodes
+
+1. 1-listint_len.c - a function that returns the number of elements in a linked listint_t list.
+
+Prototype: size_t listint_len(const listint_t *h);
+
+2. 
